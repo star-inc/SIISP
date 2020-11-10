@@ -1,3 +1,3 @@
-> If you visit the page from <https://opensource.starinc.xyz/siisp/>, please go to <https://github.com/star-inc/siisp> instead.
+> If you visit the page from <https://opensource.starinc.xyz/SIISP/>, please go to <https://github.com/star-inc/SIISP> instead.
 
-There are the snippets to fetch data from this repository.
+These are the snippets to fetch data from this repository.
