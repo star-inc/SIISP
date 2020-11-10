@@ -4,11 +4,11 @@
  * SIISP - Basic IP Protection
  * 
  * @version 2020.1
- * @link https://github.com/star-inc/siisp
+ * @link https://github.com/star-inc/SIISP
  * @copyright (c) 2020 Star Inc.
  */
 $visitor_ip = $_SERVER["REMOTE_ADDR"];
-$blocked_list = file_get_contents("https://opensource.starinc.xyz/siisp/data/ip/blocked.json");
+$blocked_list = file_get_contents("https://opensource.starinc.xyz/SIISP/data/ip/blocked.json");
 if ($blocked_ips = json_decode($blocked_list) and array_key_exists($visitor_ip, $blocked_ips)) {
     $year = date("Y") ?: "2020";
     header("SIISP: Blocked");

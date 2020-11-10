@@ -1,5 +1,3 @@
-# SIISP
-
 ![logo](logo.png)
 
 Star Inc. - Internet Security Protection
