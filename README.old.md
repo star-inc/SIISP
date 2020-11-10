@@ -13,7 +13,7 @@ Anyway, this is the old code that we used for protecting our services.
 // Star Inc. - Internet Security Protection
 $blocked_list = file_get_contents("https://restapi.starinc.xyz/basic/ip/blocked");
 $blocked_ips = json_decode($blocked_list);
-if($blocked_ips and $blocked_ips->status === 200 and in_array($_SERVER["REMOTE_ADDR"], $blocked_ips->data)) {
+if ($blocked_ips and $blocked_ips->status === 200 and in_array($_SERVER["REMOTE_ADDR"], $blocked_ips->data)) {
     header("SIISP: Blocked");
     http_response_code(403);
     die("
