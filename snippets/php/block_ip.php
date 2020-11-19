@@ -3,7 +3,7 @@
 /**
  * SIISP - Basic IP Protection
  *
- * @version 2020.2.1
+ * @version 2020.2.2
  * @link https://github.com/star-inc/SIISP
  * @copyright (c) 2020 Star Inc.
  */
@@ -18,11 +18,18 @@ if ($blocked_list) {
     );
     if (array_key_exists($visitor_ip, $blocked_ips)) {
         $year = date("Y") ?: "2020";
+        $blocked_reason = $blocked_ips[$visitor_ip]["reason"];
+        $blocked_timestamp = $blocked_ips[$visitor_ip]["forever"] ? "*" : $blocked_ips[$visitor_ip]["timestamp"];
         header("SIISP: Blocked");
+        header("SIISP-Block-IP: $visitor_ip");
+        header("SIISP-Block-Reason: $blocked_reason");
+        header("SIISP-Block-Timestamp: $blocked_timestamp");
+        $visitor_ip = htmlspecialchars($visitor_ip);
+        $blocked_reason = htmlspecialchars($blocked_reason);
         http_response_code(403);
         die("
             <h3>Blocked</h3>
-            <p>The IP:\"$visitor_ip\" has been locked due to the Security Reason.</p>
+            <p>The IP:\"$visitor_ip\" has been locked due to the security reason:\"$blocked_reason\".</p>
             <p>For more information, please visit <a href=\"https://security.starinc.xyz/blocked.html\">Star Inc. ISP Center</a>.</p>
             (c) $year <a href='https://starinc.xyz'>Star Inc.</a>
         ");
