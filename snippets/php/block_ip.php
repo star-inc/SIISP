@@ -3,7 +3,7 @@
 /**
  * SIISP - Basic IP Protection
  * 
- * @version 2020.1
+ * @version 2020.1.1
  * @link https://github.com/star-inc/SIISP
  * @copyright (c) 2020 Star Inc.
  */
