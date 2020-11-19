@@ -3,7 +3,7 @@
 /**
  * SIISP - Basic IP Protection
  *
- * @version 2020.2
+ * @version 2020.2.1
  * @link https://github.com/star-inc/SIISP
  * @copyright (c) 2020 Star Inc.
  */
@@ -13,7 +13,7 @@ if ($blocked_list) {
     $blocked_ips = array_filter(
         json_decode($blocked_list, true),
         function ($object) {
-            return $object["forever"] || $object["timestamp"] < time() + 86400;
+            return $object["forever"] || ($object["timestamp"] + 86400 > time());
         }
     );
     if (array_key_exists($visitor_ip, $blocked_ips)) {
