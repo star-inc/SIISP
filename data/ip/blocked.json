@@ -1,14 +1,8 @@
 {
-    "8.8.8.8": {
-        "origin": "ISP Center",
-        "reason": "Testing",
+    "94.196.87.119": {
+        "origin": "Kater Forum",
+        "reason": "Spam",
         "timestamp": 0,
-        "forever": false
-    },
-    "8.8.4.4": {
-        "origin": "ISP Center",
-        "reason": "Testing",
-        "timestamp": 0,
-        "forever": false
+        "forever": true
     }
 }
