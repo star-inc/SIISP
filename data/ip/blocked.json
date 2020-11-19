@@ -4,11 +4,5 @@
         "reason": "Spam",
         "timestamp": 0,
         "forever": true
-    },
-    "2001:67c:2628:647:5::299": {
-        "origin": "ISP Center",
-        "reason": "Testing",
-        "timestamp": 1605790209,
-        "forever": false
     }
 }
