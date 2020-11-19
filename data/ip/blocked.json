@@ -4,5 +4,11 @@
         "reason": "Spam",
         "timestamp": 0,
         "forever": true
+    },
+    "77.111.246.8": {
+        "origin": "ISP Center",
+        "reason": "Testing",
+        "timestamp": 1605790209,
+        "forever": false
     }
 }
